@@ -275,7 +275,7 @@ public class PluginManager implements Closeable {
                 logVerbose(String.format(
                         "Will install new plugin %s %s", pluginName, plugin.getVersion()));
                 pluginsToDownload.add(plugin);
-            } else if (installedVersion.isOlderThan(plugin.getVersion())) {
+            } else {
                 logVerbose(String.format(
                         "Installed version (%s) of %s is less than minimum required version of %s, bundled " +
                                 "plugin will be upgraded", installedVersion, pluginName, plugin.getVersion()));
